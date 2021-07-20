@@ -1,5 +1,7 @@
 # hvalla-item-roller
 > an item roller for Hvalla, a DND/TTRPG style rpg game
+> This repo doesn't contain the tables required for the activities and may not be the final version that is deployed.
+> Regardless, this is README does contain the relevant command and tag information for the bot
  
 ## What does this do?
 Currently, the item roller automatically rolls (rng) items for:

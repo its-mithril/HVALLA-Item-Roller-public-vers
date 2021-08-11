@@ -2,12 +2,18 @@ import random
 # healing is universal
 
 
-def run_healing(name, has_debuff=False):
+def heal(name, has_debuff=False):
     health = random.randint(5, 20)
-    text = "**" + name + "** has been Healed for: **" + str(health) + "** HP"
+    text = ''
+    if has_debuff:
+        text += '**HEALING + ATTEMPTING TO REMOVE DEBUFF FOR {}**\n'.format(name)
+    else:
+        text += '**HEALING FOR {}**\n'.format(name)
+
+    text += '**{}** has been healed for: **{} HP**\n'.format(name, health)
 
     if has_debuff:
         debuff_removed = random.randint(1, 100) > 50
-        return text + "\nDebuff Removed: **" + str(debuff_removed) + "**, deduct 5G"
+        text += 'Debuff Removed: **{}**, deduct 5G\n'.format(debuff_removed)
 
     return text
